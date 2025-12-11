@@ -71,7 +71,14 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown("""
         <div class='simulation-section'>
-            Here will be a simulation of the topic (python, matlab, something from the internet).
+            Here will be a simulation of the topic (python, matlab, something from the internet). \n
+            For example:\n
+        <iframe src="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html"
+        width="800"
+        height="600"
+        allowfullscreen>
+        </iframe>
+            
         </div>
     """, unsafe_allow_html=True)
 
