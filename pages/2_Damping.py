@@ -28,7 +28,7 @@ st.sidebar.markdown("""
         </div>
     """, unsafe_allow_html=True)
 
-st.markdown('<div class="top-header"><h1>♒︎ What are vibrations?︎</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="top-header"><h1>Damping</h1></div>', unsafe_allow_html=True)
 
 # --- background ---
 st.markdown('<div class="section-header"><h2>💡 Theory background</h2></div>', unsafe_allow_html=True)
@@ -39,8 +39,7 @@ with col1:
     st.markdown("""
     <div class='background'>
     
-    In the following PDF file you will find information about basic terms in vibrations theory relevant for our course,
-    and some examples of where we can see vibrations on out daily life.
+    In the following PDF file you will find information about damping and how it affects a certain system.
 
     </div>
     """, unsafe_allow_html=True)
@@ -61,12 +60,9 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown(f"""
         <div class='video-section'>
-        In this video you can find more explanation about vibrations and resonance along with visualization:\n
+        I think that for this section a good option is a zoom recording where one of you shows in Matlab explains how to analyse a system response 
+        and showing how changing the damping coefficient affects the resonance curve.
         
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vLaFAKnaRJU?si=ooRWYPxSeJHI7uXO" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
     """, unsafe_allow_html=True)
 
 
@@ -78,10 +74,33 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown("""
         <div class='simulation-section'>
+        In this section you can find two simulation that demonstrate how damping affect the system response. \n
         
-        Maybe there is no need in simulation for this page. Let me know what you thing.
+        Let's start with a simple one - \n
+        In this simulation you can play with the damping coefficient and see how it affects the piston motion - y axis. \n
+        Think - what happens at a critical damping? \n
+        
+        \n\n
             
-
+        <iframe 
+            src="https://iwant2study.org/lookangejss/02_newtonianmechanics_8oscillations/ejss_model_SHM21SLS_dampingcar/SHM21SLS_dampingcar_Simulation.xhtml"
+            width="80%"
+            height="450"
+            style="border: none;"
+            allowfullscreen
+        ></iframe>
+        
+        Now let's look at another simulation - \n
+        Choose the "Oscillate" mode with a fixed end and 0\% damping. Than increase the damping.\n
+        How the damping percentage affect the system response? \n
+        Try and play with different modes and parameters to see how the response changes in each case. \n
+        
+        <iframe 
+            src="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html"
+            width="80%"
+            height="500"
+            allowfullscreen>
+        </iframe>
             
         </div>
     """, unsafe_allow_html=True)

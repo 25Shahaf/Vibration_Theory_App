@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 import math
 import os
+from pathlib import Path
 from utils.helper_functions import setup_page
 
 # --- Helper Functions ---
@@ -38,26 +39,28 @@ with col1:
         <div class='background'>
 
         Some general background about the topic. \n
-        A link to a PDF file if needed.
 
         </div>
     """, unsafe_allow_html=True)
+
+pdf_path = Path("Introduction.pdf")
+st.download_button(
+    label="Download PDF",
+    data=pdf_path.read_bytes(),
+    file_name=pdf_path.name,
+    mime="application/pdf",
+)
 
 # --- Video Section ---
 st.markdown('<div class="section-header"><h2>▶️ Video</h2></div>', unsafe_allow_html=True)
 
 col1, col2 = st.columns([2, 1])
-video_url = 'https://www.youtube.com/watch?v=vLaFAKnaRJU&t=595s'
 
 with col1:
     st.markdown(f"""
         <div class='video-section'>
-        Here will be a video about the topic, either a link to YouTube or embedded here.\n
-        For example:\n
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vLaFAKnaRJU?si=ooRWYPxSeJHI7uXO" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        A video by Guy (?).
+        
         </div>
     """, unsafe_allow_html=True)
 
@@ -69,12 +72,12 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown("""
         <div class='simulation-section'>
-            Here will be a simulation of the topic (python, matlab, something from the internet).
+        A simulation that Guy is working on.
         </div>
     """, unsafe_allow_html=True)
 
 # --- Practice Section ---
-st.markdown('<div class="section-header"><h2>✍️ Lets prectice!</h2></div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header"><h2>✍️ Lets practice!</h2></div>', unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([2, 1, 1])
 

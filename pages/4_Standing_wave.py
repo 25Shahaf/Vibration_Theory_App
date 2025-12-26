@@ -28,7 +28,7 @@ st.sidebar.markdown("""
         </div>
     """, unsafe_allow_html=True)
 
-st.markdown('<div class="top-header"><h1>♒︎ What are vibrations?︎</h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="top-header"><h1>Standing wave</h1></div>', unsafe_allow_html=True)
 
 # --- background ---
 st.markdown('<div class="section-header"><h2>💡 Theory background</h2></div>', unsafe_allow_html=True)
@@ -39,8 +39,10 @@ with col1:
     st.markdown("""
     <div class='background'>
     
-    In the following PDF file you will find information about basic terms in vibrations theory relevant for our course,
-    and some examples of where we can see vibrations on out daily life.
+    A standing wave is a wave pattern that appears stationary, formed by the superposition (interference) of two waves traveling in opposite directions,
+    usually an incident wave and its reflection, creating fixed points of zero amplitude (nodes) and maximum amplitude (antinodes). 
+    
+    In the following PDF file you will find information about the standing wave.
 
     </div>
     """, unsafe_allow_html=True)
@@ -61,12 +63,8 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown(f"""
         <div class='video-section'>
-        In this video you can find more explanation about vibrations and resonance along with visualization:\n
+        Do we have a video for this?
         
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vLaFAKnaRJU?si=ooRWYPxSeJHI7uXO" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-        web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
     """, unsafe_allow_html=True)
 
 
@@ -78,10 +76,18 @@ col1, col2 = st.columns([2, 1])
 with col1:
     st.markdown("""
         <div class='simulation-section'>
-        
-        Maybe there is no need in simulation for this page. Let me know what you thing.
-            
 
+        There are several simulations about standing wave, we need to choose the best one that won't be
+        confusing to the students.
+        
+        <iframe
+        src="https://ophysics.com/waves8b.html"
+        style="
+            width: 90%;
+            height: 800px;
+            border: none;
+        "
+        ></iframe>
             
         </div>
     """, unsafe_allow_html=True)
